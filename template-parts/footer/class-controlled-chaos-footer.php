@@ -7,7 +7,7 @@
  * @since  1.0.0
  */
 
-namespace CC_Theme;
+namespace MPS_Framework;
 
 // Restrict direct access
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -48,4 +48,4 @@ class Controlled_Chaos_Theme_Footer {
 
 }
 
-$cct_footer = new Controlled_Chaos_Theme_Footer;
+$mps_footer = new Controlled_Chaos_Theme_Footer;

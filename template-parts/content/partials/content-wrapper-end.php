@@ -6,7 +6,7 @@
  * @subpackage Controlled_Chaos_Theme
  * @since Controlled Chaos 1.0.0
  */
-namespace CC_Theme;
+namespace MPS_Framework;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) exit; ?>

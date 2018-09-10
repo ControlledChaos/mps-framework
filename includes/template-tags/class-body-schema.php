@@ -7,7 +7,7 @@
  * @since  1.0.0
  */
 
-namespace CC_Theme;
+namespace MPS_Framework;
 
 // Restrict direct access
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -22,7 +22,7 @@ class Body_Schema {
 	 */
 	public function __construct() {
 
-		add_action( 'cct_body_schema', [ $this, 'schema' ] );
+		add_action( 'mps_body_schema', [ $this, 'schema' ] );
 
 	}
 

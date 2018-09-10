@@ -7,7 +7,7 @@
  * @since  1.0.0
  */
 
-namespace CC_Theme;
+namespace MPS_Framework;
 
 // Restrict direct access
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -47,7 +47,7 @@ class Content {
             $partial = get_template_part( 'template-parts/content/partials/content', 'singular' );
         }
 
-        $content = apply_filters( 'cct_content_part', $partial );
+        $content = apply_filters( 'mps_content_part', $partial );
         
         echo $content;
 

@@ -7,7 +7,7 @@
  * @since  1.0.0
  */
 
-namespace CC_Theme;
+namespace MPS_Framework;
 
 // Restrict direct access
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -37,7 +37,7 @@ class Controlled_Chaos_Theme_Comments_Status {
      */
     public static function none() {
 
-        $comments_none = apply_filters( 'cct_comments_none', sprintf( '<p class="comments-none-closed"><span class="comments-none">%1s</span></p>', __( 'Be the first to comment!', 'controlled-chaos' ) ) );
+        $comments_none = apply_filters( 'mps_comments_none', sprintf( '<p class="comments-none-closed"><span class="comments-none">%1s</span></p>', __( 'Be the first to comment!', 'controlled-chaos' ) ) );
 
         return $comments_none;
 
@@ -50,7 +50,7 @@ class Controlled_Chaos_Theme_Comments_Status {
      */
     public static function closed() {
 
-        $comments_closed = apply_filters( 'cct_comments_closed', sprintf( '<p class="comments-none-closed"><span class="comments-closed">%1s</span>.</p>', __( 'Comments are closed for this post', 'controlled-chaos' ) ) );
+        $comments_closed = apply_filters( 'mps_comments_closed', sprintf( '<p class="comments-none-closed"><span class="comments-closed">%1s</span>.</p>', __( 'Comments are closed for this post', 'controlled-chaos' ) ) );
 
         return $comments_closed;
 

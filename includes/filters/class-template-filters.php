@@ -7,7 +7,7 @@
  * @since  1.0.0
  */
 
-namespace CC_Theme;
+namespace MPS_Framework;
 
 // Restrict direct access
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -41,7 +41,7 @@ class Template_Filters {
             'video'     => esc_html__( 'HD Video', 'controlled-chaos' )
 		];
 
-		$insert_sizes = apply_filters( 'cct_insert_image_sizes', $sizes );
+		$insert_sizes = apply_filters( 'mps_insert_image_sizes', $sizes );
 		return $insert_sizes;
 
     }

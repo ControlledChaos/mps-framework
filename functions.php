@@ -6,12 +6,12 @@
  * @subpackage Controlled_Chaos_Theme
  * @author     Greg Sweet <greg@ccdzine.com>
  * @copyright  Copyright (c) 2017 - 2018, Greg Sweet
- * @link       https://github.com/ControlledChaos/controlled-chaos-theme
+ * @link       https://github.com/ControlledChaos/mps-framework
  * @license    http://www.gnu.org/licenses/gpl-3.0.html
  * @since      Controlled Chaos 1.0.0
  */
 
-namespace CC_Theme\Functions;
+namespace MPS_Framework\Functions;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -58,7 +58,7 @@ final class Functions {
 
 	/**
 	 * Constructor magic method.
-	 * 
+	 *
 	 * @since  1.0.0
 	 * @access public
 	 * @return void
@@ -67,7 +67,7 @@ final class Functions {
 
 	/**
 	 * Hooks and filters.
-	 * 
+	 *
 	 * @since  1.0.0
 	 * @access public
 	 * @return void
@@ -106,7 +106,7 @@ final class Functions {
 
 	/**
 	 * Hooks and filters.
-	 * 
+	 *
 	 * @since  1.0.0
 	 * @access public
 	 * @return void
@@ -123,7 +123,7 @@ final class Functions {
 
 	/**
 	 * Replace 'no-js' class with 'js' in the <html> element when JavaScript is detected.
-	 * 
+	 *
 	 * @since  1.0.0
 	 * @access public
 	 * @return string
@@ -194,7 +194,7 @@ final class Functions {
 		 */
 
 		// Default color choices.
-		$gutenberg_colors = apply_filters( 'cct_gutenberg_colors', [
+		$gutenberg_colors = apply_filters( 'mps_gutenberg_colors', [
 			'#444',
 			'#eee',
 			'#23282d',
@@ -276,10 +276,10 @@ final class Functions {
 
 		// Customizer logo upload support.
 		add_theme_support( 'custom-logo', [
-			'width'       => apply_filters( 'cct_logo_width', 180 ),
-			'height'      => apply_filters( 'cct_logo_height', 180 ),
-			'flex-width'  => apply_filters( 'cct_logo_flex_width', true ),
-			'flex-height' => apply_filters( 'cct_logo_flex_height', true )
+			'width'       => apply_filters( 'mps_logo_width', 180 ),
+			'height'      => apply_filters( 'mps_logo_height', 180 ),
+			'flex-width'  => apply_filters( 'mps_logo_flex_width', true ),
+			'flex-height' => apply_filters( 'mps_logo_flex_height', true )
 		 ] );
 
 		 /**
@@ -294,13 +294,13 @@ final class Functions {
 
 		/**
 		 * Register theme menus.
-		 * 
+		 *
 		 * @since  1.0.0
 		 */
 		register_nav_menus( [
-				'main'   => apply_filters( 'cct_main_menu_name', esc_html__( 'Main Menu', 'controlled-chaos' ) ),
-				'footer' => apply_filters( 'cct_footer_menu_name', esc_html__( 'Footer Menu', 'controlled-chaos' ) ),
-				'social' => apply_filters( 'cct_social_menu_name', esc_html__( 'Social Menu', 'controlled-chaos' ) )
+				'main'   => apply_filters( 'mps_main_menu_name', esc_html__( 'Main Menu', 'controlled-chaos' ) ),
+				'footer' => apply_filters( 'mps_footer_menu_name', esc_html__( 'Footer Menu', 'controlled-chaos' ) ),
+				'social' => apply_filters( 'mps_social_menu_name', esc_html__( 'Social Menu', 'controlled-chaos' ) )
 		] );
 
 		/**
@@ -308,7 +308,7 @@ final class Functions {
 		 *
 		 * @since 1.0.0
 		 */
-		add_editor_style( '/assets/css/editor-style.css', [ 'cct-admin' ], '', 'screen' );
+		add_editor_style( '/assets/css/editor-style.css', [ 'mps-admin' ], '', 'screen' );
 
 		/**
 		 * Disable Jetpack open graph. We have the open graph tags in the theme.
@@ -348,8 +348,8 @@ final class Functions {
 		wp_enqueue_script( 'jquery' );
 
 		// HTML 5 support.
-		wp_enqueue_script( 'cct-html5',  get_theme_file_uri( '/assets/js/html5.min.js' ), [], '' );
-		wp_script_add_data( 'cct-html5', 'conditional', 'lt IE 9' );
+		wp_enqueue_script( 'mps-html5',  get_theme_file_uri( '/assets/js/html5.min.js' ), [], '' );
+		wp_script_add_data( 'mps-html5', 'conditional', 'lt IE 9' );
 
 		// Comments scripts.
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -381,11 +381,11 @@ final class Functions {
 	public function frontend_styles() {
 
 		// Theme sylesheet.
-		wp_enqueue_style( 'cct-style',      get_stylesheet_uri(), [], '', 'screen' );
+		wp_enqueue_style( 'mps-style',      get_stylesheet_uri(), [], '', 'screen' );
 
 		// Internet Explorer styles.
-		wp_enqueue_style( 'cct-ie8',        get_theme_file_uri( '/assets/css/ie8.css' ), [], '', 'screen' );
-		wp_style_add_data( 'cct-ie8', 'conditional', 'lt IE 9' );
+		wp_enqueue_style( 'mps-ie8',        get_theme_file_uri( '/assets/css/ie8.css' ), [], '', 'screen' );
+		wp_style_add_data( 'mps-ie8', 'conditional', 'lt IE 9' );
 
 		/**
 		 * Check if we and/or Google are online. If so, get Google fonts
@@ -394,18 +394,18 @@ final class Functions {
 		$google = checkdnsrr( 'google.com' );
 
 		if ( $google ) {
-			wp_enqueue_style( 'cct-fonts', 'https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Source+Code+Pro:200,300,400,500,600,700,900', [], '', 'screen' );
+			wp_enqueue_style( 'mps-fonts', 'https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Source+Code+Pro:200,300,400,500,600,700,900', [], '', 'screen' );
 		} else {
-			wp_enqueue_style( 'cct-sans',  get_theme_file_uri( '/assets/fonts/open-sans/open-sans.min.css' ), [], '', 'screen' );
-			wp_enqueue_style( 'cct-serif', get_theme_file_uri( '/assets/fonts/merriweather/merriweather.min.css' ), [], '', 'screen' );
-			wp_enqueue_style( 'cct-code',  get_theme_file_uri( '/assets/fonts/source-code-pro/source-code-pro.min.css' ), [], '', 'screen' );
+			wp_enqueue_style( 'mps-sans',  get_theme_file_uri( '/assets/fonts/open-sans/open-sans.min.css' ), [], '', 'screen' );
+			wp_enqueue_style( 'mps-serif', get_theme_file_uri( '/assets/fonts/merriweather/merriweather.min.css' ), [], '', 'screen' );
+			wp_enqueue_style( 'mps-code',  get_theme_file_uri( '/assets/fonts/source-code-pro/source-code-pro.min.css' ), [], '', 'screen' );
 		}
 
 		// Media and supports queries.
-		wp_enqueue_style( 'cct-queries',   get_theme_file_uri( '/queries.css' ), [], '', 'screen' );
+		wp_enqueue_style( 'mps-queries',   get_theme_file_uri( '/queries.css' ), [], '', 'screen' );
 
 		// Print styles.
-		wp_enqueue_style( 'cct-print',     get_theme_file_uri( '/assets/css/print.css' ), [], '', 'print' );
+		wp_enqueue_style( 'mps-print',     get_theme_file_uri( '/assets/css/print.css' ), [], '', 'print' );
 
 	}
 
@@ -473,7 +473,7 @@ final class Functions {
 
 /**
  * Gets the instance of the Functions class.
- * 
+ *
  * This function is useful for quickly grabbing data
  * used throughout the theme.
  *
@@ -481,13 +481,13 @@ final class Functions {
  * @access public
  * @return object
  */
-function cctheme() {
+function mps_framework() {
 
-	$cctheme = Functions::get_instance();
+	$mps_framework = Functions::get_instance();
 
-	return $cctheme;
+	return $mps_framework;
 
 }
 
 // Run the Functions class.
-cctheme();
+mps_framework();

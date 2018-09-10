@@ -7,12 +7,12 @@
  * @since  1.0.0
  */
 
-namespace CC_Theme;
+namespace MPS_Framework;
 
 // Restrict direct access
 if ( ! defined( 'ABSPATH' ) ) exit;
-$before = apply_filters( 'cct_main_nav_item_before', '<span class="main-nav-item-before"></span>' );
-$after  = apply_filters( 'cct_main_nav_item_after', '<span class="main-nav-item-after"></span>' );
+$before = apply_filters( 'mps_main_nav_item_before', '<span class="main-nav-item-before"></span>' );
+$after  = apply_filters( 'mps_main_nav_item_after', '<span class="main-nav-item-after"></span>' );
 $args   = [
         'menu'            => 'main',
         'menu_class'      => 'main-nav-menu-list',
@@ -34,7 +34,7 @@ $args   = [
 ]; ?>
 <nav class="main-navigation" role="directory" itemscope itemtype="http://schema.org/SiteNavigationElement">
 	<div class="main-navigation global-wrapper main-navigation-wrapper">
-	<?php $menu_toggle = apply_filters( 'cct_nav_toggle_text', esc_html__( 'Menu', 'controlled-chaos' ) ); ?>
+	<?php $menu_toggle = apply_filters( 'mps_nav_toggle_text', esc_html__( 'Menu', 'controlled-chaos' ) ); ?>
 		<button id="main-nav-toggle" class="main-nav-toggle" aria-controls="main-nav-menu" aria-expanded="false"><?php echo $menu_toggle; ?></button>
 		<?php wp_nav_menu( $args ); ?>
 	</div>

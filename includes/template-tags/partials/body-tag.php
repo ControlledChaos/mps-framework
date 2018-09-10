@@ -7,9 +7,9 @@
  * @since  1.0.0
  */
 
-namespace CC_Theme;
+namespace MPS_Framework;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) exit; ?>
 
-<body <?php body_class(); ?> itemscope="itemscope" itemtype="<?php do_action( 'cct_body_schema' ); ?>">
+<body <?php body_class(); ?> itemscope="itemscope" itemtype="<?php do_action( 'mps_body_schema' ); ?>">

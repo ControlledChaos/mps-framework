@@ -7,11 +7,11 @@
  * @since  1.0.0
  */
 
-namespace CC_Theme;
+namespace MPS_Framework;
 
 // Restrict direct access
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 echo '</footer>', "\r";
 
-do_action( 'cct_after_footer' );
+do_action( 'mps_after_footer' );

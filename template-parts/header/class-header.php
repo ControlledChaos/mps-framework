@@ -7,7 +7,7 @@
  * @since  1.0.0
  */
 
-namespace CC_Theme;
+namespace MPS_Framework;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -22,7 +22,7 @@ class Header {
 	 */
 	public function __construct() {
 
-        add_action( 'cct_header', [ $this, 'partials' ] );
+        add_action( 'mps_header', [ $this, 'partials' ] );
 
     }
 

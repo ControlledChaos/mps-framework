@@ -7,7 +7,7 @@
  * @since  1.0.0
  */
 
-namespace CC_Theme;
+namespace MPS_Framework;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -93,7 +93,7 @@ class HTML {
      */
     public function loader() {
 
-        do_action( 'cct_loader' );
+        do_action( 'mps_loader' );
 
     }
 
@@ -102,7 +102,7 @@ class HTML {
      */
     public function topbar() {
 
-        do_action( 'cct_topbar' );
+        do_action( 'mps_topbar' );
 
     }
 
@@ -115,7 +115,7 @@ class HTML {
      */
     public function header() {
 
-        do_action( 'cct_header' );
+        do_action( 'mps_header' );
 
     }
 

@@ -7,7 +7,7 @@
  * @since  1.0.0
  */
 
-namespace CC_Theme;
+namespace MPS_Framework;
 
 // No direct access, please
 if ( ! defined( 'ABSPATH' ) ) exit;

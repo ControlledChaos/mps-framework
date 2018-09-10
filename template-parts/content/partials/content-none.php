@@ -7,15 +7,15 @@
  * @since  1.0.0
  */
 
-namespace CC_Theme;
+namespace MPS_Framework;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-    do_action( 'cct_before_main' ); ?>
+    do_action( 'mps_before_main' ); ?>
     
 	<main class="main" role="main" itemscope itemprop="mainContentOfPage">
-		<?php do_action( 'cct_before_article' ); ?>
+		<?php do_action( 'mps_before_article' ); ?>
         <article class="hentry" id="post-<?php the_ID(); ?>" role="article">
             <header class="entry-header">
                 <?php echo sprintf( '<h1 class="entry-title">%1s</h1>', esc_html__( 'Nothing Found' ) ); ?>
@@ -30,6 +30,6 @@ if ( ! defined( 'ABSPATH' ) ) exit;
             endif; ?>
             </div><!-- entry-content -->
         </article>
-		<?php do_action( 'cct_after_article' ); ?>
+		<?php do_action( 'mps_after_article' ); ?>
 	</main>
-	<?php do_action( 'cct_after_main' ); ?>
+	<?php do_action( 'mps_after_main' ); ?>

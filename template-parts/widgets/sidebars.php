@@ -7,7 +7,7 @@
  * @since  1.0.0
  */
 
-namespace CC_Theme;
+namespace MPS_Framework;
 
 // No direct access, please
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -23,10 +23,10 @@ class Sidebar_Widgets {
 	public function __construct() {
 
         // Add primary sidebar.
-        add_action( 'cct_content_aside', [ $this, 'primary' ], 20 );
+        add_action( 'mps_content_aside', [ $this, 'primary' ], 20 );
 
         // Add primary sidebar.
-        add_action( 'cct_content_aside', [ $this, 'secondary' ], 21 );
+        add_action( 'mps_content_aside', [ $this, 'secondary' ], 21 );
 
     }
 

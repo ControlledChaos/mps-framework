@@ -8,7 +8,7 @@
  * @subpackage Controlled_Chaos_Theme
  * @since Controlled Chaos 1.0.0
  */
-namespace CC_Theme;
+namespace MPS_Framework;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -21,13 +21,13 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  * @since 1.0.0
  * @return void
  */
-if ( ! function_exists( 'cct_template' ) ) :
+if ( ! function_exists( 'mps_template' ) ) :
 
-	function cct_template() {
+	function mps_template() {
 
-		$cct_template = require get_theme_file_path( '/template-parts/content/content.php' );
+		$mps_template = require get_theme_file_path( '/template-parts/content/content.php' );
 
-		return $cct_template;
+		return $mps_template;
 
 	}
 

@@ -35,7 +35,7 @@ class Customizer_Blog {
         /**
 		 * Framework settings panel.
 		 */
-		$wp_customize->add_section( 'cct_customizer_blog', [
+		$wp_customize->add_section( 'mps_customizer_blog', [
 			'priority'    => 35,
 			'capability'  => 'edit_theme_options',
 			'title'       => __( 'Blog & Archives', 'controlled-chaos' ),
@@ -43,14 +43,14 @@ class Customizer_Blog {
         ] );
         
         // Blog content format.
-		$wp_customize->add_setting( 'cct_blog_content_format', [
+		$wp_customize->add_setting( 'mps_blog_content_format', [
 			'default'	        => 'content',
-			'sanitize_callback' => 'cct_sanitize_blog_content_format'
+			'sanitize_callback' => 'mps_sanitize_blog_content_format'
 		] );
 
-		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cct_blog_content_format', [
-			'section'     => 'cct_customizer_blog',
-			'settings'    => 'cct_blog_content_format',
+		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'mps_blog_content_format', [
+			'section'     => 'mps_customizer_blog',
+			'settings'    => 'mps_blog_content_format',
 			'label'       => __( 'Blog Content', 'controlled-chaos' ),
 			'description' => __( 'Full content or excerpts', 'controlled-chaos' ),
 			'type'        => 'select',
@@ -62,14 +62,14 @@ class Customizer_Blog {
 		) );
 		
 		// Archive content format.
-		$wp_customize->add_setting( 'cct_archive_content_format', [
+		$wp_customize->add_setting( 'mps_archive_content_format', [
 			'default'	        => 'content',
-			'sanitize_callback' => 'cct_sanitize_archive_content_format'
+			'sanitize_callback' => 'mps_sanitize_archive_content_format'
 		] );
 
-		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cct_archive_content_format', [
-			'section'     => 'cct_customizer_blog',
-			'settings'    => 'cct_archive_content_format',
+		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'mps_archive_content_format', [
+			'section'     => 'mps_customizer_blog',
+			'settings'    => 'mps_archive_content_format',
 			'label'       => __( 'Archive Content', 'controlled-chaos' ),
 			'description' => __( 'Full content or excerpts', 'controlled-chaos' ),
 			'type'        => 'select',
@@ -81,14 +81,14 @@ class Customizer_Blog {
         ) );
         
         // Blog/archive navigation format.
-		$wp_customize->add_setting( 'cct_blog_navigation_format', [
+		$wp_customize->add_setting( 'mps_blog_navigation_format', [
 			'default'	        => 'standard',
-			'sanitize_callback' => 'cct_sanitize_blog_navigation_format'
+			'sanitize_callback' => 'mps_sanitize_blog_navigation_format'
 		] );
 
-		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cct_blog_navigation_format', [
-			'section'     => 'cct_customizer_blog',
-			'settings'    => 'cct_blog_navigation_format',
+		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'mps_blog_navigation_format', [
+			'section'     => 'mps_customizer_blog',
+			'settings'    => 'mps_blog_navigation_format',
 			'label'       => __( 'Blog Pages Navigation', 'controlled-chaos' ),
 			'description' => __( 'Next/previous links or page count.', 'controlled-chaos' ),
 			'type'        => 'select',
