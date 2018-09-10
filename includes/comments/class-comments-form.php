@@ -47,9 +47,9 @@ class Controlled_Chaos_Theme_Comments_Form {
         }
 
         $fields =  apply_filters( 'mps_comments_signup_fields', [
-            'author' => sprintf( '<p class="comment-form-author"><label for="author">%1s</label> %2s<input id="author" name="author" type="text" value="%3s"' . $aria_req . ' /></p>', __( 'Name', 'controlled-chaos' ), $required, esc_attr( $commenter['comment_author'] ) ),
-            'email'  => sprintf( '<p class="comment-form-email"><label for="email">%1s</label> %2s<input id="email" name="email" type="text" value="%3s"' . $aria_req . ' /></p>', __( 'Email', 'controlled-chaos' ), $required, esc_attr(  $commenter['comment_author_email'] ) ),
-            'url'    => sprintf( '<p class="comment-form-url"><label for="url">%1s</label><input id="url" name="url" type="text" value="%2s" /></p>',  __( 'Website', 'controlled-chaos' ), esc_attr( $commenter['comment_author_url'] ) ),
+            'author' => sprintf( '<p class="comment-form-author"><label for="author">%1s</label> %2s<input id="author" name="author" type="text" value="%3s"' . $aria_req . ' /></p>', __( 'Name', 'mps-framework' ), $required, esc_attr( $commenter['comment_author'] ) ),
+            'email'  => sprintf( '<p class="comment-form-email"><label for="email">%1s</label> %2s<input id="email" name="email" type="text" value="%3s"' . $aria_req . ' /></p>', __( 'Email', 'mps-framework' ), $required, esc_attr(  $commenter['comment_author_email'] ) ),
+            'url'    => sprintf( '<p class="comment-form-url"><label for="url">%1s</label><input id="url" name="url" type="text" value="%2s" /></p>',  __( 'Website', 'mps-framework' ), esc_attr( $commenter['comment_author_url'] ) ),
         ] );
 
         $comments_args = apply_filters( 'mps_comments_labels', [
@@ -57,15 +57,15 @@ class Controlled_Chaos_Theme_Comments_Form {
             'id_submit'            => 'comment-submit',
             'class_submit'         => 'comment-submit',
             'name_submit'          => 'submit',
-            'title_reply'          => __( 'Comments', 'controlled-chaos' ),
-            'title_reply_to'       => __( 'Reply to %s', 'controlled-chaos' ),
-            'cancel_reply_link'    => __( 'Cancel reply', 'controlled-chaos' ),
-            'label_submit'         => __( 'Submit', 'controlled-chaos' ),
+            'title_reply'          => __( 'Comments', 'mps-framework' ),
+            'title_reply_to'       => __( 'Reply to %s', 'mps-framework' ),
+            'cancel_reply_link'    => __( 'Cancel reply', 'mps-framework' ),
+            'label_submit'         => __( 'Submit', 'mps-framework' ),
             'format'               => 'html5',
-            'comment_field'        =>  sprintf( '<div class="comment-form-comment"><label for="comment">%1s</label><textarea id="comment" name="comment" aria-required="true"></textarea></div>', __( 'Leave a comment:', 'controlled-chaos' ) ),
-            'must_log_in'          => sprintf( '<p class="comment-form-log-in">%1s <a href="%2s">%3s</a> %4s.</p>', __( 'You must be', 'controlled-chaos' ), wp_login_url(), __( 'logged in', 'controlled-chaos' ), __( 'to post a comment', 'controlled-chaos' ) ),
-            'logged_in_as'         => sprintf( '<p class="comment-form-logged-in">%1s <a href="%2s">%3s</a>. <a class="comment-form-log-out" href="%4s" title="Log out of this account">%5s?</a></p>', __( 'Logged in as', 'controlled-chaos' ), admin_url( 'profile.php' ), $user_identity, wp_logout_url(), __( 'Log out', 'controlled-chaos' ) ),
-            'comment_notes_before' => '<p class="comment-form-notes">' . __( 'Your email address will not be published.', 'controlled-chaos' ) . '</p>',
+            'comment_field'        =>  sprintf( '<div class="comment-form-comment"><label for="comment">%1s</label><textarea id="comment" name="comment" aria-required="true"></textarea></div>', __( 'Leave a comment:', 'mps-framework' ) ),
+            'must_log_in'          => sprintf( '<p class="comment-form-log-in">%1s <a href="%2s">%3s</a> %4s.</p>', __( 'You must be', 'mps-framework' ), wp_login_url(), __( 'logged in', 'mps-framework' ), __( 'to post a comment', 'mps-framework' ) ),
+            'logged_in_as'         => sprintf( '<p class="comment-form-logged-in">%1s <a href="%2s">%3s</a>. <a class="comment-form-log-out" href="%4s" title="Log out of this account">%5s?</a></p>', __( 'Logged in as', 'mps-framework' ), admin_url( 'profile.php' ), $user_identity, wp_logout_url(), __( 'Log out', 'mps-framework' ) ),
+            'comment_notes_before' => '<p class="comment-form-notes">' . __( 'Your email address will not be published.', 'mps-framework' ) . '</p>',
             'fields'               => $fields,
         ] );
 

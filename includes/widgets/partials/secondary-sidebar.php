@@ -13,9 +13,9 @@ namespace MPS_Framework;
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 register_sidebar( array(
-    'name'          => __( 'Secondary Sidebar', 'controlled-chaos' ),
+    'name'          => __( 'Secondary Sidebar', 'mps-framework' ),
     'id'            => 'secondary-sidebar',
-    'description'   => __( 'Sidebar that displays on the Two Sidebars template', 'controlled-chaos' ),
+    'description'   => __( 'Sidebar that displays on the Two Sidebars template', 'mps-framework' ),
     'before_widget' => '<div id="%1$s" class="widget secondary-sidebar-widget %2$s">',
     'after_widget'  => '</div>',
     'before_title'  => '<h3 class="widget-title">',

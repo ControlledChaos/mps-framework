@@ -58,7 +58,7 @@ if ( get_next_posts_link() ) {
 //	Link to first page, plus ellipses if necessary.
 if ( ! in_array( 1, $links ) ) {
     $class       = 1 == $paged ? ' class="active"' : '';
-    $first_link  = sprintf( '<li%s><a href="%s">%s</a></li>', $class, esc_url( get_pagenum_link( 1 ) ), esc_html( '1', 'controlled-chaos' ) );
+    $first_link  = sprintf( '<li%s><a href="%s">%s</a></li>', $class, esc_url( get_pagenum_link( 1 ) ), esc_html( '1', 'mps-framework' ) );
 
     if ( ! in_array( 2, $links ) ) {
         $first_more = '<li>&hellip;</li>';
@@ -86,7 +86,7 @@ if ( ! in_array( $max, $links ) ) {
 } else {
     $last = null;
 }
-$label = apply_filters( 'mps_numeric_pagination_label', __( 'Page: ', 'controlled-chaos' ) ); ?>
+$label = apply_filters( 'mps_numeric_pagination_label', __( 'Page: ', 'mps-framework' ) ); ?>
 <nav class="numeric-pagination">
     <label class="numeric-pagination-label" for="numeric-pagination-list"><?php echo $label; ?></label>
     <ul id="numeric-pagination-list">

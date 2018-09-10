@@ -13,11 +13,11 @@ namespace MPS_Framework;
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 if ( is_search() ) {
-    $prev = __( 'Previous Results', 'controlled-chaos' );
-    $next = __( 'More Results', 'controlled-chaos' );
+    $prev = __( 'Previous Results', 'mps-framework' );
+    $next = __( 'More Results', 'mps-framework' );
 } else {
-    $prev = __( 'Previous Page', 'controlled-chaos' );
-    $next = __( 'Next Page', 'controlled-chaos' );
+    $prev = __( 'Previous Page', 'mps-framework' );
+    $next = __( 'Next Page', 'mps-framework' );
 }
 
 $prev_posts = apply_filters( 'mps_prev_posts_label', sprintf( '<span>%1s</span>', $prev ) );

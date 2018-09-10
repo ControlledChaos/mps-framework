@@ -148,7 +148,7 @@ final class Functions {
 		 *
 		 * @since 1.0.0
 		 */
-		load_theme_textdomain( 'controlled-chaos' );
+		load_theme_textdomain( 'mps-framework' );
 
 		/**
 		 * Add theme support.
@@ -218,18 +218,6 @@ final class Functions {
 		// Customizer widget refresh support.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
-		// WooCommerce support.
-		add_theme_support( 'woocommerce' );
-		add_theme_support( 'wc-product-gallery-zoom' );
-		// TODO: add Fancybox to WC products.
-		// add_theme_support( 'wc-product-gallery-lightbox' );
-		add_theme_support( 'wc-product-gallery-slider' );
-
-		// Beaver Builder support.
-		add_theme_support( 'fl-theme-builder-headers' );
-		add_theme_support( 'fl-theme-builder-footers' );
-		add_theme_support( 'fl-theme-builder-parts' );
-
 		// Featured image support.
 		add_theme_support( 'post-thumbnails' );
 
@@ -243,18 +231,18 @@ final class Functions {
 		 */
 
 		// 16:9 HD Video.
-		add_image_size( __( 'video', 'controlled-chaos' ), 1280, 720, true );
-		add_image_size( __( 'video-md', 'controlled-chaos' ), 960, 540, true );
-		add_image_size( __( 'video-sm', 'controlled-chaos' ), 640, 360, true );
+		add_image_size( __( 'video', 'mps-framework' ), 1280, 720, true );
+		add_image_size( __( 'video-md', 'mps-framework' ), 960, 540, true );
+		add_image_size( __( 'video-sm', 'mps-framework' ), 640, 360, true );
 
 		// 21:9 Cinemascope.
-		add_image_size( __( 'banner', 'controlled-chaos' ), 1280, 549, true );
-		add_image_size( __( 'banner-md', 'controlled-chaos' ), 960, 411, true );
-		add_image_size( __( 'banner-sm', 'controlled-chaos' ), 640, 274, true );
+		add_image_size( __( 'banner', 'mps-framework' ), 1280, 549, true );
+		add_image_size( __( 'banner-md', 'mps-framework' ), 960, 411, true );
+		add_image_size( __( 'banner-sm', 'mps-framework' ), 640, 274, true );
 
 		// Add image size for meta tags if companion plugin is not activated.
-		if ( ! is_plugin_active( 'controlled-chaos-plugin/controlled-chaos-plugin.php' ) ) {
-			add_image_size( __( 'Meta Image', 'controlled-chaos' ), 1200, 630, true );
+		if ( ! is_plugin_active( 'mps-framework/mps-framework.php' ) ) {
+			add_image_size( __( 'Meta Image', 'mps-framework' ), 1200, 630, true );
 		}
 
 		// Header support.
@@ -298,9 +286,9 @@ final class Functions {
 		 * @since  1.0.0
 		 */
 		register_nav_menus( [
-				'main'   => apply_filters( 'mps_main_menu_name', esc_html__( 'Main Menu', 'controlled-chaos' ) ),
-				'footer' => apply_filters( 'mps_footer_menu_name', esc_html__( 'Footer Menu', 'controlled-chaos' ) ),
-				'social' => apply_filters( 'mps_social_menu_name', esc_html__( 'Social Menu', 'controlled-chaos' ) )
+				'main'   => apply_filters( 'mps_main_menu_name', esc_html__( 'Main Menu', 'mps-framework' ) ),
+				'footer' => apply_filters( 'mps_footer_menu_name', esc_html__( 'Footer Menu', 'mps-framework' ) ),
+				'social' => apply_filters( 'mps_social_menu_name', esc_html__( 'Social Menu', 'mps-framework' ) )
 		] );
 
 		/**

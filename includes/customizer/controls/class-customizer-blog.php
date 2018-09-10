@@ -38,8 +38,8 @@ class Customizer_Blog {
 		$wp_customize->add_section( 'mps_customizer_blog', [
 			'priority'    => 35,
 			'capability'  => 'edit_theme_options',
-			'title'       => __( 'Blog & Archives', 'controlled-chaos' ),
-			'description' => __( 'Content and navigation archives.', 'controlled-chaos' )
+			'title'       => __( 'Blog & Archives', 'mps-framework' ),
+			'description' => __( 'Content and navigation archives.', 'mps-framework' )
         ] );
         
         // Blog content format.
@@ -51,12 +51,12 @@ class Customizer_Blog {
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'mps_blog_content_format', [
 			'section'     => 'mps_customizer_blog',
 			'settings'    => 'mps_blog_content_format',
-			'label'       => __( 'Blog Content', 'controlled-chaos' ),
-			'description' => __( 'Full content or excerpts', 'controlled-chaos' ),
+			'label'       => __( 'Blog Content', 'mps-framework' ),
+			'description' => __( 'Full content or excerpts', 'mps-framework' ),
 			'type'        => 'select',
 			'choices'     => [
-				'content' => __( 'Full Content', 'controlled-chaos' ),
-				'excerpt' => __( 'Excerpts', 'controlled-chaos' )
+				'content' => __( 'Full Content', 'mps-framework' ),
+				'excerpt' => __( 'Excerpts', 'mps-framework' )
 				]
 			]
 		) );
@@ -70,12 +70,12 @@ class Customizer_Blog {
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'mps_archive_content_format', [
 			'section'     => 'mps_customizer_blog',
 			'settings'    => 'mps_archive_content_format',
-			'label'       => __( 'Archive Content', 'controlled-chaos' ),
-			'description' => __( 'Full content or excerpts', 'controlled-chaos' ),
+			'label'       => __( 'Archive Content', 'mps-framework' ),
+			'description' => __( 'Full content or excerpts', 'mps-framework' ),
 			'type'        => 'select',
 			'choices'     => [
-				'content' => __( 'Full Content', 'controlled-chaos' ),
-				'excerpt' => __( 'Excerpts', 'controlled-chaos' )
+				'content' => __( 'Full Content', 'mps-framework' ),
+				'excerpt' => __( 'Excerpts', 'mps-framework' )
 				]
 			]
         ) );
@@ -89,12 +89,12 @@ class Customizer_Blog {
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'mps_blog_navigation_format', [
 			'section'     => 'mps_customizer_blog',
 			'settings'    => 'mps_blog_navigation_format',
-			'label'       => __( 'Blog Pages Navigation', 'controlled-chaos' ),
-			'description' => __( 'Next/previous links or page count.', 'controlled-chaos' ),
+			'label'       => __( 'Blog Pages Navigation', 'mps-framework' ),
+			'description' => __( 'Next/previous links or page count.', 'mps-framework' ),
 			'type'        => 'select',
 			'choices'     => [
-				'standard' => __( 'Next/Previous', 'controlled-chaos' ),
-				'numeric'  => __( 'Page Count', 'controlled-chaos' )
+				'standard' => __( 'Next/Previous', 'mps-framework' ),
+				'numeric'  => __( 'Page Count', 'mps-framework' )
 				]
 			]
 		) );

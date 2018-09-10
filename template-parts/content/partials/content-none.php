@@ -22,9 +22,9 @@ if ( ! defined( 'ABSPATH' ) ) exit;
             </header>
             <div class="entry-content" itemprop="articleBody">
             <?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
-                <p><?php printf( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'controlled-chaos' ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
+                <p><?php printf( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'mps-framework' ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
             <?php else : ?>
-                <p><?php _e( 'No content available at this time. Maybe try searching&hellip;', 'controlled-chaos' ); ?></p>
+                <p><?php _e( 'No content available at this time. Maybe try searching&hellip;', 'mps-framework' ); ?></p>
             <?php
                 get_search_form();
             endif; ?>

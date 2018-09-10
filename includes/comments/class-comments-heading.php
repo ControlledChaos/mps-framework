@@ -37,7 +37,7 @@ class Controlled_Chaos_Theme_Comments_Heading {
         $comments_number = get_comments_number();
         
         if ( 1 === $comments_number ) {
-            $comments_heading = sprintf( _x( 'One comment on %1s', 'comments title', 'controlled-chaos' ), get_the_title() );
+            $comments_heading = sprintf( _x( 'One comment on %1s', 'comments title', 'mps-framework' ), get_the_title() );
         } else {
             $comments_heading = sprintf(
                 _nx(
@@ -45,7 +45,7 @@ class Controlled_Chaos_Theme_Comments_Heading {
                     '%1s Comments on %2s',
                     $comments_number,
                     'comments title',
-                    'controlled-chaos'
+                    'mps-framework'
                 ),
                 number_format_i18n( $comments_number ),
                 get_the_title()

@@ -34,7 +34,7 @@ $args   = [
 ]; ?>
 <nav class="main-navigation" role="directory" itemscope itemtype="http://schema.org/SiteNavigationElement">
 	<div class="main-navigation global-wrapper main-navigation-wrapper">
-	<?php $menu_toggle = apply_filters( 'mps_nav_toggle_text', esc_html__( 'Menu', 'controlled-chaos' ) ); ?>
+	<?php $menu_toggle = apply_filters( 'mps_nav_toggle_text', esc_html__( 'Menu', 'mps-framework' ) ); ?>
 		<button id="main-nav-toggle" class="main-nav-toggle" aria-controls="main-nav-menu" aria-expanded="false"><?php echo $menu_toggle; ?></button>
 		<?php wp_nav_menu( $args ); ?>
 	</div>
