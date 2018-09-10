@@ -7,4 +7,4 @@
 A copy of my Controlled Chaos starter theme renamed and developed as a framework for a client site.
 
 This is not meant for general use. Please use the original to create your own site-specific theme.
-[https://github.com/ControlledChaos/controlled-chaos-theme](https://github.com/ControlledChaos/controlled-chaos-theme)
+<br />[https://github.com/ControlledChaos/controlled-chaos-theme](https://github.com/ControlledChaos/controlled-chaos-theme)
