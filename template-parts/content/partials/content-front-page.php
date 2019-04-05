@@ -11,12 +11,12 @@ namespace MPS_Framework;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) exit; ?>
-<div id="content" class="site-content global-wrapper page-wrapper">
+<div id="content" class="site-content page-wrapper">
     <?php do_action( 'mps_before_main' ); ?>
     <main class="main" role="main" itemscope itemprop="mainContentOfPage">
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <?php do_action( 'mps_before_article' ); ?>
-        <article class="hentry" id="post-<?php the_ID(); ?>" role="article">
+        <article class="hentry global-wrapper" id="post-<?php the_ID(); ?>" role="article">
             <header class="entry-header">
                 <?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
             </header>

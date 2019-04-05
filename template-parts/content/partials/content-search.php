@@ -13,10 +13,10 @@ namespace MPS_Framework;
 if ( ! defined( 'ABSPATH' ) ) exit;
 
     do_action( 'mps_before_main' ); ?>
-    
+
 	<main class="main" role="main" itemscope itemprop="mainContentOfPage">
 		<?php do_action( 'mps_before_article' ); ?>
-        <article class="hentry" id="post-<?php the_ID(); ?>" role="article">
+        <article class="hentry global-wrapper" id="post-<?php the_ID(); ?>" role="article">
             <header class="entry-header">
                 <?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
             </header>

@@ -222,27 +222,49 @@ final class Functions {
 		add_theme_support( 'post-thumbnails' );
 
 		/**
-		 * Add image sizes.
-		 *
-		 * Three sizes per aspect ratio so that WordPress
-		 * will use srcset for responsive images.
+		 * Force image sizes and crop in settings.
 		 *
 		 * @since 1.0.0
 		 */
 
-		// 16:9 HD Video.
+		// Thumbnail size, 1:1 square ratio.
+		update_option( 'thumbnail_size_w', 160 );
+		update_option( 'thumbnail_size_h', 160 );
+		update_option( 'thumbnail_crop', 1 );
+
+		// Medium size, 4:3 standard ratio.
+		update_option( 'medium_size_w', 320 );
+		update_option( 'medium_size_h', 240 );
+		update_option( 'medium_crop', 1 );
+
+		// Large size, 4:3 standard ratio.
+		update_option( 'large_size_w', 160 );
+		update_option( 'large_size_h', 160 );
+		update_option( 'large_crop', 1 );
+
+		/**
+		 * Add image sizes.
+		 *
+		 * @since 1.0.0
+		 */
+
+		// 1:1 square.
+		add_image_size( __( 'thumb-large', 'mps-framework' ), 240, 240, true );
+		add_image_size( __( 'thumb-xlarge', 'mps-framework' ), 320, 320, true );
+
+		// 16:9 HD video.
 		add_image_size( __( 'video', 'mps-framework' ), 1280, 720, true );
 		add_image_size( __( 'video-md', 'mps-framework' ), 960, 540, true );
 		add_image_size( __( 'video-sm', 'mps-framework' ), 640, 360, true );
 
-		// 21:9 Cinemascope.
+		// 21:9 cinemascope.
 		add_image_size( __( 'banner', 'mps-framework' ), 1280, 549, true );
 		add_image_size( __( 'banner-md', 'mps-framework' ), 960, 411, true );
 		add_image_size( __( 'banner-sm', 'mps-framework' ), 640, 274, true );
 
 		// Add image size for meta tags if companion plugin is not activated.
 		if ( ! is_plugin_active( 'mps-framework/mps-framework.php' ) ) {
-			add_image_size( __( 'Meta Image', 'mps-framework' ), 1200, 630, true );
+			add_image_size( __( 'meta-image', 'mps-framework' ), 1200, 630, true );
 		}
 
 		// Header support.
@@ -322,6 +344,7 @@ final class Functions {
 		remove_action( 'wp_head', 'wlwmanifest_link' );
 		remove_action( 'wp_head', 'wp_generator' );
 		remove_action( 'wp_head', 'wp_site_icon', 99 );
+
 	}
 
 	/**
@@ -368,29 +391,14 @@ final class Functions {
 	 */
 	public function frontend_styles() {
 
+		// Load web fonts from Google.
+		wp_enqueue_style( 'mps-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i|Raleway:500,500i,600,600i,700,700i,800,800i,900,900i', [], '', 'screen' );
+
 		// Theme sylesheet.
 		wp_enqueue_style( 'mps-style',      get_stylesheet_uri(), [], '', 'screen' );
 
-		// Internet Explorer styles.
-		wp_enqueue_style( 'mps-ie8',        get_theme_file_uri( '/assets/css/ie8.css' ), [], '', 'screen' );
-		wp_style_add_data( 'mps-ie8', 'conditional', 'lt IE 9' );
-
-		/**
-		 * Check if we and/or Google are online. If so, get Google fonts
-		 * from their servers. Otherwise, get them from the theme directory.
-		 */
-		$google = checkdnsrr( 'google.com' );
-
-		if ( $google ) {
-			wp_enqueue_style( 'mps-fonts', 'https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Source+Code+Pro:200,300,400,500,600,700,900', [], '', 'screen' );
-		} else {
-			wp_enqueue_style( 'mps-sans',  get_theme_file_uri( '/assets/fonts/open-sans/open-sans.min.css' ), [], '', 'screen' );
-			wp_enqueue_style( 'mps-serif', get_theme_file_uri( '/assets/fonts/merriweather/merriweather.min.css' ), [], '', 'screen' );
-			wp_enqueue_style( 'mps-code',  get_theme_file_uri( '/assets/fonts/source-code-pro/source-code-pro.min.css' ), [], '', 'screen' );
-		}
-
 		// Media and supports queries.
-		wp_enqueue_style( 'mps-queries',   get_theme_file_uri( '/queries.css' ), [], '', 'screen' );
+		wp_enqueue_style( 'mps-queries',   get_theme_file_uri( '/queries.css' ), [ 'mps-style' ], '', 'screen' );
 
 		// Print styles.
 		wp_enqueue_style( 'mps-print',     get_theme_file_uri( '/assets/css/print.css' ), [], '', 'print' );
@@ -406,7 +414,11 @@ final class Functions {
 	 */
 	public function admin_styles() {
 
+		// Load web fonts from Google.
+		wp_enqueue_style( 'mps-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i|Raleway:500,500i,600,600i,700,700i,800,800i,900,900i', [], '', 'screen' );
 
+		// Theme sylesheet.
+		wp_enqueue_style( 'mps-admin', get_theme_file_uri( '/assets/css/admin.css' ), [], '', 'screen' );
 
 	}
 

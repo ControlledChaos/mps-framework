@@ -33,7 +33,7 @@ class Controlled_Chaos_Theme_Meta_Image {
 		global $post;
 
         if ( ! is_404() ) {
-            $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'Meta Image', [ 1200, 630 ], true, '' );
+            $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'meta-image', [ 1200, 630 ], true, '' );
         }
         if ( has_post_thumbnail() ) {
             $src = $image[0];

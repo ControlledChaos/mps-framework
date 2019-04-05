@@ -26,7 +26,7 @@ class Index {
 
 		/**
 		 * Run class for sidebars and widget areas.
-		 * 
+		 *
 		 * Needs to run before the loop.
 		 */
 		get_sidebar();

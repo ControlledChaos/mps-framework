@@ -34,11 +34,13 @@ class Template_Filters {
         global $_wp_additional_image_sizes;
 
 		$sizes = [
-			'thumbnail' => esc_html__( 'Thumbnail', 'mps-framework' ),
-			'medium'    => esc_html__( 'Medium', 'mps-framework' ),
-            'large'     => esc_html__( 'Large', 'mps-framework' ),
-            'banner'    => esc_html__( 'Banner', 'mps-framework' ),
-            'video'     => esc_html__( 'HD Video', 'mps-framework' )
+            'thumbnail'    => esc_html__( 'Thumbnail', 'mps-framework' ),
+            'thumb-large'  => esc_html__( 'Large Thumbn', 'mps-framework' ),
+            'thumb-xlarge' => esc_html__( 'XL Thumb', 'mps-framework' ),
+			'medium'       => esc_html__( 'Medium', 'mps-framework' ),
+            'large'        => esc_html__( 'Large', 'mps-framework' ),
+            'banner'       => esc_html__( 'Banner', 'mps-framework' ),
+            'video'        => esc_html__( 'HD Video', 'mps-framework' )
 		];
 
 		$insert_sizes = apply_filters( 'mps_insert_image_sizes', $sizes );

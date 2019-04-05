@@ -28,7 +28,7 @@ class Content {
 
     /**
 	 * Content partials.
-     * 
+     *
      * @since  1.0.0
 	 */
     public function partials() {
@@ -48,7 +48,7 @@ class Content {
         }
 
         $content = apply_filters( 'mps_content_part', $partial );
-        
+
         echo $content;
 
     }
